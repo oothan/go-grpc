@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/oothan/go-grpc/helloworld/protogen/pb";
+
+package helloworld;
+
+service Greeter {
+    rpc SayHello (HelloworldReq) returns (HelloworldRes) {}
+}
+
+message HelloworldReq {
+    string name = 1;
+}
+
+message HelloworldRes {
+    string message = 1;
+}
